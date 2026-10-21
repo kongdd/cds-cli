@@ -211,3 +211,7 @@ def main():
         parser.exit(1, f"{error}\n")
     except KeyboardInterrupt:
         parser.exit(130, "已停止，可重新执行 download 续传\n")
+
+
+if __name__ == "__main__":
+    main()

@@ -11,7 +11,7 @@ import cdsapi
 
 @pytest.fixture
 def jobs():
-    path = Path(__file__).resolve().parents[1] / "ERA5" / "cds_jobs.py"
+    path = Path(__file__).resolve().parents[1] / "src" / "cds_cli.py"
     spec = importlib.util.spec_from_file_location("cds_jobs", path)
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)

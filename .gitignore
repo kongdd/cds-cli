@@ -1,5 +1,9 @@
 *.pyc
+*.egg-info/
 data
 
 *lock*
 .python-version
+*.egg-info
+
+build

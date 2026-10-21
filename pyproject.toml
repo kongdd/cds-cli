@@ -8,6 +8,7 @@ authors = [
 ]
 requires-python = ">=3.9"
 dependencies = [
+    "aria2>=0.0.1b0 ; sys_platform == 'linux' or sys_platform == 'win32'",
     "cdsapi>=0.7.7",
 ]
 keywords = ["cds", "copernicus", "era5", "climate", "download"]
@@ -26,5 +27,9 @@ Homepage = "https://github.com/kongdd/cds-cli"
 Repository = "https://github.com/kongdd/cds-cli"
 
 [build-system]
-requires = ["uv_build>=0.13.1,<0.14.0"]
-build-backend = "uv_build"
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+py-modules = ["cds_cli"]
