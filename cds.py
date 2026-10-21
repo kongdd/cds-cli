@@ -168,7 +168,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     commands = parser.add_subparsers(dest="command", required=True)
     fetch_parser = commands.add_parser("fetch", parents=[common], help="查询已完成任务，保存链接和文件名")
-    fetch_parser.add_argument("--limit", type=int, default=3, help="任务数（默认 3）")
+    fetch_parser.add_argument("--limit", type=int, default=999, help="任务数（默认 999，即全部）")
     fetch_parser.add_argument("--prefix", help="文件名前缀（默认：数据集 ID 加下划线）")
     fetch_parser.add_argument(
         "--subfix", "--suffix", dest="subfix", help="年份后的变量标注，如 _Ta；保留原扩展名"
