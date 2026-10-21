@@ -7,6 +7,7 @@ Copernicus CDS 任务提交、查询与下载的命令行工具。
 其他用户安装（无需克隆仓库）：
 ```bash
 uv pip install git+https://github.com/kongdd/cds-cli
+uv pip install . --system # local install
 # uv pip install cds-cli
 ```
 
@@ -52,7 +53,7 @@ key: <PERSONAL-ACCESS-TOKEN>
 
 ## 使用
 ```bash
-cds status --status accepted,running,successful # 查看任务状态
+cds status --type accepted,running,successful # 查看任务状态
 cds fetch    # 拉取下载的url
 cds download # 按清单下载（断点续传）
 cds monitor  # 监听清单变化，自动下载

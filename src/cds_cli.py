@@ -171,7 +171,7 @@ def main():
     fetch_parser.add_argument("--limit", type=int, default=999, help="任务数（默认 999，即全部）")
     fetch_parser.add_argument("--prefix", help="文件名前缀（默认：数据集 ID 加下划线）")
     fetch_parser.add_argument(
-        "--subfix", "--suffix", dest="subfix", help="年份后的变量标注，如 _Ta；保留原扩展名"
+        "--subfix", dest="subfix", help="年份后的变量标注，如 _Ta；保留原扩展名"
     )
     commands.add_parser("download", parents=[common, options], help="按保存的清单下载，支持断点续传")
     monitor_parser = commands.add_parser("monitor", parents=[common, options], help="常驻监听清单变化，自动下载")
@@ -181,7 +181,7 @@ def main():
     status_parser = commands.add_parser("status", help="列出任务状态")
     status_parser.add_argument("--limit", type=int, default=20, help="显示任务数（默认 20）")
     status_parser.add_argument(
-        "--status", help="按状态过滤，逗号分隔，如 accepted,running"
+        "--type", help="按状态过滤，逗号分隔，如 accepted,running"
     )
     args = parser.parse_args()
     for name in ("limit", "jobs", "interval"):
