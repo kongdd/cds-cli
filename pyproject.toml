@@ -1,18 +1,29 @@
 [project]
 name = "cds-cli"
 version = "0.1.0"
-description = "Add your description here"
+description = "命令行工具：提交、查询并下载 Copernicus CDS 任务"
 readme = "README.md"
 authors = [
     { name = "Dongdong Kong", email = "kongdd@users.noreply.github.com" }
 ]
-requires-python = ">=3.14"
+requires-python = ">=3.9"
 dependencies = [
     "cdsapi>=0.7.7",
 ]
+keywords = ["cds", "copernicus", "era5", "climate", "download"]
+classifiers = [
+    "Environment :: Console",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Atmospheric Science",
+]
 
 [project.scripts]
-cds-cli = "cds_cli:main"
+cds = "cds_cli:main"
+
+[project.urls]
+Homepage = "https://github.com/kongdd/cds-cli"
+Repository = "https://github.com/kongdd/cds-cli"
 
 [build-system]
 requires = ["uv_build>=0.13.1,<0.14.0"]
